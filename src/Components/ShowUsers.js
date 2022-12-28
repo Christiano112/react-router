@@ -31,7 +31,7 @@ const ShowUsers = () => {
             <h1>Altschool's Students Profile</h1>
 
             {loading ? (
-                <p style={{ color: "blue", textAlign: "center", fontSize: "3rem", padding: "3rem 0" }}>Loading...</p>
+                <p style={{ color: "blue", textAlign: "center", fontSize: "2rem", padding: "3rem 0" }}>Loading...</p>
             ) : (
                 <section>
                     <ul>
@@ -41,25 +41,23 @@ const ShowUsers = () => {
                             const pic = `${data.picture.large}`;
                             const gender = `${data.gender}`;
                             const tel = `${data.cell}`;
-                            const userName = `${data.login.username}`
+                            const userName = `${data.login.username}`;
 
                             return (
-                                <>
-                                    <li key={`${id}`}>
-                                        <div className="card">
-                                            <div>
-                                                <img src={`${pic}`} alt="user pic" style={{ width: "10rem", height: "10rem", borderRadius: ".5rem" }} />
-                                            </div>
-                                            <div className="card-info">
-                                                <h2>Student's Info</h2>
-                                                <p><b>Name:</b> {`${name}`}</p>
-                                                <p><b>Gender:</b> {`${gender}`}</p>
-                                                <p><b>Telephone:</b> {`${tel}`}</p>
-                                                <p><b>Slack Username:</b> {`${userName}`}</p>
-                                            </div>
+                                <li key={id} className="card-container">
+                                    <div className="card">
+                                        <div>
+                                            <img src={`${pic}`} alt="user pic" style={{ width: "10rem", height: "10rem", borderRadius: ".5rem" }} />
                                         </div>
-                                    </li>
-                                </>
+                                        <div className="card-info">
+                                            <h2 className="text-2xl font-bold">Student's Info</h2>
+                                            <p><b>Name:</b> {name}</p>
+                                            <p><b>Gender:</b> {gender}</p>
+                                            <p><b>Telephone:</b> {tel}</p>
+                                            <p><b>Slack Username:</b> {userName}</p>
+                                        </div>
+                                    </div>
+                                </li>
                             );
                         })}
                     </ul>

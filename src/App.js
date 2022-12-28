@@ -10,7 +10,7 @@ import "./Components/styles.css"
 
 function ErrorFallback({ error, resetErrorBoundary }) {
   return (
-    <div role="alert" style={{ width: "40rem", margin: "3rem auto", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: "3rem" }}>
+    <div role="alert" className='user'>
       <h1>Something went wrong:</h1>
       <h2 style={{ color: "red" }}>{error.message}</h2>
       <button onClick={resetErrorBoundary}

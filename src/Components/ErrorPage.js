@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 const ErrorPage = () => {
     const navigate = useNavigate()
     return (
-        <div style={{ textAlign: "center" }}>
+        <div style={{ textAlign: "center" }} className="user">
             <h1>404 Page</h1>
 
             <section>
@@ -12,7 +12,7 @@ const ErrorPage = () => {
             </section>
 
             <button onClick={() => navigate("/")}
-                style={{ background: "#27ae60", color: "red", padding: ".5rem 1rem", marginTop: "3rem" }}>
+                style={{ background: "#27ae60", color: "red", padding: ".5rem 1rem", marginBottom: "2rem" }}>
                 Take me Home
             </button>
         </div>
