@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from 'axios';
 
-const url = `https://randomuser.me/api/?page=3&results=50&seed=abc`
+const url = `https://randomuser.me/api/?page=4&results=80&seed=abc`
 
 const ShowUsers = () => {
     const [user, setUser] = useState([]);
@@ -21,7 +21,7 @@ const ShowUsers = () => {
         getUsers()
     }, [])
 
-    const perPage = 5;
+    const perPage = 4;
     const skip = page * perPage - perPage;
     const pages = [...Array(10).keys()].map((num) => num + 1);
 
