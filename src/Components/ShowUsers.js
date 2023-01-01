@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from 'axios';
 
-const url = `https://randomuser.me/api/?page=5&results=60&seed=abc`
+const url = `https://randomuser.me/api/?page=1&results=60&seed=abc`
 
 const ShowUsers = () => {
     const [user, setUser] = useState([]);
