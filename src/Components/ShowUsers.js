@@ -21,7 +21,7 @@ const ShowUsers = () => {
         getUsers()
     }, [])
 
-    const perPage = 4;
+    const perPage = 5;
     const skip = page * perPage - perPage;
     const pages = [...Array(10).keys()].map((num) => num + 1);
 
